@@ -12,11 +12,14 @@
 #import "ColorViewController.h"
 
 
-@interface ViewController : UIViewController<WEPopoverControllerDelegate, UIPopoverControllerDelegate, ColorViewControllerDelegate> 
-
+@interface ViewController : UIViewController<WEPopoverControllerDelegate, UIPopoverControllerDelegate, ColorViewControllerDelegate> {
+	WEPopoverController *popoverController;
+}
 @property (strong, nonatomic) IBOutlet UIButton *btn;
-@property (nonatomic, strong) WEPopoverController *wePopoverController;
 
+@property (nonatomic, strong) WEPopoverController *popoverController;
 - (IBAction)buttonTapped:(id)sender;
+
+
 
 @end

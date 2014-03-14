@@ -4,7 +4,6 @@ A ColorPopover is a very simple component for iPhone/iPad that provides a "Popov
 
 ![](https://github.com/gazolla/ColorPopover/raw/master/screenshot.PNG)
 
-Youtube video: http://youtu.be/cIc2_QJgXu8
 
 ##Supported Platforms
 
@@ -18,22 +17,22 @@ In order to install `ColorPopover`, you'll need to copy the ColorPopover folder 
 
 In order to use `ColorPopover`, you'll need to include the following code in your project:
 
-    if (!self.wePopoverController) {
+    if (!self.popoverController) {
 		
 		ColorViewController *contentViewController = [[ColorViewController alloc] init];
         contentViewController.delegate = self;
-		self.wePopoverController = [[WEPopoverController alloc] initWithContentViewController:contentViewController];
-		self.wePopoverController.delegate = self;
-		self.wePopoverController.passthroughViews = [NSArray arrayWithObject:self.navigationController.navigationBar];
+		self.popoverController = [[WEPopoverController alloc] initWithContentViewController:contentViewController];
+		self.popoverController.delegate = self;
+		self.popoverController.passthroughViews = [NSArray arrayWithObject:self.navigationController.navigationBar];
 		
-		[self.wePopoverController presentPopoverFromRect:btn.frame
+		[self.popoverController presentPopoverFromRect:btn.frame
                                                 inView:self.view
                               permittedArrowDirections:(UIPopoverArrowDirectionUp|UIPopoverArrowDirectionDown)
                                               animated:YES];
         
 	} else {
-		[self.wePopoverController dismissPopoverAnimated:YES];
-		self.wePopoverController = nil;
+		[self.popoverController dismissPopoverAnimated:YES];
+		self.popoverController = nil;
 	}
 
 
@@ -48,9 +47,6 @@ You will want to implement the method `colorPopoverControllerDidSelectColor:(NSS
 `ColorPopover` was written by [Sebastian Gazolla Jr][1].
 
   [1]: http://gazapps.com
-Website: http://gazapps.com/  
-Google+: http://gplus.to/gazollajr  
-Twitter: http://twitter.com/gazollajr
 
   
 ColorPopover based on WEPopover Created by Werner Altewischer:
