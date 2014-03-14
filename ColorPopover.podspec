@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'ColorPopover'
-  s.version      = '0.0.1'
+  s.version      = '0.0.1b'
   s.platform     =  :ios, '5.0'
   s.homepage     = 'https://github.com/gazolla/ColorPopover'
   s.summary      = 'ColorPopover is a simple component for iOS that provides a "Popover" color picker.
